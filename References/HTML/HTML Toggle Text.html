@@ -1,0 +1,96 @@
+<html>
+<head>
+<style>
+.collapsible {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px;
+    text-align: left;
+    outline: none;
+	font-family: Ubuntu;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #0a0a0a;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+<button class="collapsible">FEATURE</button>
+<div class="content"><br />
+<ul>
+<li><strong>Ultra lightweight, sweat-free <em>(moisture wicking)</em> &amp; all-way stretch</strong> - A perfect legging for yoga, dance, workout, casual rendezvous, everyday wear, and so much more! </li>
+<li><strong>Chafe-Resistant</strong></li>
+<li><strong>Moves with you during all your bends and stretches without sheering</strong></li>
+</ul>
+</div>
+<button class="collapsible">MATERIAL</button>
+<div class="content"><br />
+<ul>
+<li><strong>That perfect blend of 88% Polyester and 12% Spandex - </strong>for a silky soft &amp; smooth, stretchable and highly breathable legging. </li>
+<li><strong>All-way Stretch knitted fabric</strong> enables the leggings to stretch and contract so that you can move effortlessly with maximum comfort.</li>
+<li>The dense microfiber yarn <strong>wicks away sweat easily and dries fast.</strong></li>
+</ul>
+</div>
+<button class="collapsible">FIT</button>
+<div class="content"><br />
+<ul>
+<li><strong>Second skin fitting </strong>due to <strong>High <span>Compression Fiber</span></strong>. Form-fitting material for a streamlined body fit.</li>
+<li>High Elastic Waistband</li>
+<li>Ankle Length</li>
+<li><strong>True to Size</strong> </li>
+</ul>
+</div>
+<button class="collapsible">CARE</button>
+<div class="content"><br />
+<ul>
+<li>Machine wash or hand wash (<em>recommended</em>) cold, Tumble dry low</li>
+<li>Do not Iron</li>
+</ul>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
